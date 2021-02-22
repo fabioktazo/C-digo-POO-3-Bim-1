@@ -1,23 +1,27 @@
 from Produtos import *
 from Cliente import *
 from Pessoa import *
-from main import *
+#from main import *
 import sys
 import os 
 
 class Cardapio:
+
+  def __init__(self):
+    self.cardapio = []
+
   def exibir_cardapio (self):
-    
     
     #vocês não digitaram self aqui(self.cardapio), então cardápio é uma variável e não um atributo
     #a variável não vao conseguir ser usada fora da função
-    cardapio = ["SUSHI TRADICIONAL", "HOSOMAKI", "MAKIZUSHI", "TEMAKI", "URUMAKI", "NIGUIRI", "SASHIMI", "HOT FILADÉLFIA", "TEMPURÁ", "YAKISOBA TRADICIONAL", "YAKISOBA VEGANO", "HARUMAKI", "MOYASHI", "MOCHI", "MANJU"]
+    #self.cardapio = cardapio
+    self.cardapio = ["SUSHI TRADICIONAL", "HOSOMAKI", "MAKIZUSHI", "TEMAKI", "URUMAKI", "NIGUIRI", "SASHIMI", "HOT FILADÉLFIA", "TEMPURÁ", "YAKISOBA TRADICIONAL", "YAKISOBA VEGANO", "HARUMAKI", "MOYASHI", "MOCHI", "MANJU"]
 
-    self.cardapio = cardapio
+    #self.cardapio = cardapio
     
 
-    for x in range(len(cardapio)):
-      print(x+1,'-',cardapio[x])  
+    for x in range(len(self.cardapio)):
+      print(x+1,'-', self.cardapio[x])  
     
     print("16 - ENCERRAR PEDIDOS E PROSSEGUIR")
     a = input("DIGITE O NÚMERO CORRESPONDENTE AO SEU PEDIDO (OBS.: VOCÊ PODERÁ ESCOLHER MAIS DE UM PEDIDO DESDE SELECIONE UM DE CADA VEZ): ")

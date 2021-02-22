@@ -12,10 +12,11 @@ import sys
 import os  
 
 class Menu:
-
   
   def __init__(self):
     self.menu = menu=[]
+    
+    self.cardapio = Cardapio()
    
   def Exibir_Menu_um(self):
     global cliente
@@ -35,7 +36,7 @@ class Menu:
     
     elif a== "2":
       os.system('clear')
-      self.cardapio = Cardapio()
+      #self.cardapio = Cardapio()
       self.cardapio.exibir_cardapio()
     
     elif a== "3":
@@ -48,8 +49,6 @@ class Menu:
       print("ERRO")
       self.Exibir_Menu_dois
   
-  
-
   def Exibir_Menu_tres (self):
     print("1-REALIZAR NOVO PEDIDO\n2-INSTRUÇÕES DE PAGAMENTO E ENTREGA")
     a = input('Digite o número correspondente: ')
